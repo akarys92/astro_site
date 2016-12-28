@@ -393,6 +393,17 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl {
   padding: 15px 30px;
 }
+#feedback .feedback-box {
+  height: 200px;
+}
+#feedback #review_text {
+  max-height: 135px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.quote-body {
+  margin: 5%;
+}
 ::-moz-selection {
   color: white;
   text-shadow: none;

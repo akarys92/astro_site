@@ -96,3 +96,8 @@ gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() 
     gulp.watch('*.html', browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
 });
+
+// Official Build
+gulp.task("official", ['less', 'minify-css', 'minify-js'], function(){
+    
+});

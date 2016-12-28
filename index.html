@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -74,7 +73,7 @@
                 <h1 id="homeHeading">Something marketing-y</h1>
                 <hr>
                 <p>Your source for international moving and storage for the past 45 years.</p>
-                <a href="http://astrointl.com/on-line%20estimate1.htm" target="_blank" class="btn btn-primary btn-xl page-scroll">Get a Quote</a>
+                <a class="btn btn-primary btn-xl page-scroll" data-toggle="modal" data-target=".quote-modal-lg">Get a Quote</a>
             </div>
         </div>
     </header>
@@ -138,7 +137,7 @@
     <section class="no-padding" id="portfolio">
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-sm-4">
                     <a href="img/portfolio/fullsize/crane_old.jpg" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/crane_old.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -153,7 +152,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-sm-4">
                     <a href="img/portfolio/fullsize/breakable_wrap.jpg" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/breakable_wrap.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -168,7 +167,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-sm-4">
                     <a href="img/portfolio/fullsize/exotic_cars.jpg" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/exotic_cars.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -191,7 +190,7 @@
     <section id="feedback">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 text-center feedback-box">
                     <h2 class="section-heading">What are people are saying?</h2>
                     <hr class="primary">
                     <h3 id="review_text">"Great service!"</h3>
@@ -205,10 +204,308 @@
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Get a quick and free quote!</h2>
-                <a href="http://astrointl.com/on-line%20estimate1.htm" class="btn btn-default btn-xl sr-button">Get a quote!</a>
+                <a class="btn btn-default btn-xl sr-button" data-toggle="modal" data-target=".quote-modal-lg">Get a quote!</a>
             </div>
         </div>
     </aside>
+    <!-- Modal -->
+    <div class="modal fade quote-modal-lg" tabindex="-1" role="dialog" aria-labelledby="quoteModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Quick Quote</h4>
+                </div>
+                <div class="quote-body">
+                    <form>
+                        <h3>Contact Information</h3>
+                        <div class="form-inputs col-xs-offset-1">
+                            <div class="form-group row">
+                                <label for="first-name" class="col-xs-12  col-md-2 col-form-label">First Name:</label>
+                                <div class="col-xs-12 col-md-10">
+                                    <input type="text" name="First Name" tabindex="1">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="last-name" class="col-xs-12 col-md-2 col-form-label">Last Name:</label>
+                                <div class="col-xs-12 col-md-10">
+                                    <input type="text" name="Last Name" tabindex="2">
+                                </div>
+                            </div> 
+                            <div class="form-group row">
+                                <label for="email" class="col-xs-12 col-md-2 col-form-label">Email:</label>
+                                <div class="col-xs-12 col-md-10">
+                                    <input type="email" name="Email" tabindex="3">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="phone" class="col-xs-12 col-md-2 col-form-label">Phone:</label>
+                                <div class="col-xs-12 col-md-10">
+                                    <input type="tel" name="Telephone" tabindex="4">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row">
+                                <label for="Quote" class="col-xs-12 col-md-2 col-form-label">How would you like to receive your quote?</label>
+                                <div class="col-xs-12 col-md-10">
+                                    <select size="1" name="How would you like to receive quote" tabindex="5">
+                                        <option value="Please Choose" selected="">Please Choose</option>
+                                        <option>E-Mail</option>
+                                        <option>Telephone</option>
+                                    </select>  
+                                </div>                          
+                            </div>
+                            <div class="form-group row">
+                                <label for="Hear About" class="col-form-label col-xs-12 col-md-2">How did you hear about us?</label>
+                                <div class="col-xs-12 col-md-10">
+                                    <select size="1" name="How did you hear about us" tabindex="6">
+                                        <option value="Please Choose" selected="">Please Choose</option>
+                                        <option>Web Search</option>
+                                        <option>Newspaper advertisement</option>
+                                        <option>Recommendation</option>
+                                        <option>Phone book</option>
+                                        <option>Other</option>
+                                    </select>                      
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>Move From:</h3>
+                        <div class="form-inputs col-xs-offset-1">
+                            <div class="form-group row">
+                                <label for="Origin City" class="col-form-label col-xs-12 col-md-2">City:</label>
+                                <div class="col-xs-12 col-md-10">
+                                    <input type="text" name="Origin City" size="28" tabindex="7">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Origin State" class="col-form-label col-xs-12 col-md-2">State:</label>
+                                <div class="col-xs-12 col-md-10">
+                                    <input type="text" name="Origin State" size="5" tabindex="8">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Zip Code" class="col-form-label col-xs-12 col-md-2">Zip Code:</label>
+                                <div class="col-xs-12 col-md-10">
+                                    <input type="text" name="Origin Zip Code" size="11" tabindex="9" maxlength="5">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Move Date" class="col-xs-12 col-md-2 col-form-label">Move Date:</label>
+                                <div class="col-xs-12 col-md-10">
+                                    <select class="txtSelect" tabindex="10" name="Move date month" size="1">
+                                        <option selected="" value="">MMM
+                                        </option>
+                                        <option value="Jan">Jan
+                                        </option>
+                                        <option value="Feb">Feb
+                                        </option>
+                                        <option value="Mar">Mar
+                                        </option>
+                                        <option value="Apr">Apr
+                                        </option>
+                                        <option value="May">May
+                                        </option>
+                                        <option value="Jun">Jun
+                                        </option>
+                                        <option value="Jul">Jul
+                                        </option>
+                                        <option value="Aug">Aug
+                                        </option>
+                                        <option value="Sep">Sep
+                                        </option>
+                                        <option value="Oct">Oct
+                                        </option>
+                                        <option value="Nov">Nov
+                                        </option>
+                                        <option value="Dec">Dec
+                                        </option>
+                                    </select>
+                                    <select class="txtSelect" tabindex="11" name="Move Date Day" size="1">
+                                        <option selected="" value="">DD
+                                        </option>
+                                        <option value="01">1
+                                        </option>
+                                        <option value="02">2
+                                        </option>
+                                        <option value="03">3
+                                        </option>
+                                        <option value="04">4
+                                        </option>
+                                        <option value="05">5
+                                        </option>
+                                        <option value="06">6
+                                        </option>
+                                        <option value="07">7
+                                        </option>
+                                        <option value="08">8
+                                        </option>
+                                        <option value="09">9
+                                        </option>
+                                        <option value="10">10
+                                        </option>
+                                        <option value="11">11
+                                        </option>
+                                        <option value="12">12
+                                        </option>
+                                        <option value="13">13
+                                        </option>
+                                        <option value="14">14
+                                        </option>
+                                        <option value="15">15
+                                        </option>
+                                        <option value="16">16
+                                        </option>
+                                        <option value="17">17
+                                        </option>
+                                        <option value="18">18
+                                        </option>
+                                        <option value="19">19
+                                        </option>
+                                        <option value="20">20
+                                        </option>
+                                        <option value="21">21
+                                        </option>
+                                        <option value="22">22
+                                        </option>
+                                        <option value="23">23
+                                        </option>
+                                        <option value="24">24
+                                        </option>
+                                        <option value="25">25
+                                        </option>
+                                        <option value="26">26
+                                        </option>
+                                        <option value="27">27
+                                        </option>
+                                        <option value="28">28
+                                        </option>
+                                        <option value="29">29
+                                        </option>
+                                        <option value="30">30
+                                        </option>
+                                        <option value="31">31
+                                        </option>
+                                    </select>
+                                    <select class="txtSelect" tabindex="12" name="Move Date Year" size="1">
+                                        <option selected="" value="">YYYY
+                                        </option>
+                                        <option value="2016">2016
+                                        </option>
+                                        <option value="2017">2017
+                                        </option>
+                                        <option value="2018">2018
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Move Size" class="col-xs-12 col-md-2 col-form-label">Move Size:</label>
+                                <div class="col-xs-12 col-md-10">
+                                    <select size="1" name="Move Size" tabindex="13" style="max-width:250px;">
+                                        <option selected="" value="Select One">Please Select</option>
+                                        <option value="5 to 10 boxes">5 to 10 boxes</option>
+                                        <option value="11-20 boxes">11-20 boxes</option>
+                                        <option value="1,500 lbs- small studio">1,500 lbs- small studio
+                                        </option>
+                                        <option value="2,000 lbs- large studio">2,000 lbs- large studio
+                                        </option>
+                                        <option value="3,500 lbs-1 to 2 bedroom apartment">3,500 lbs-1 to 2 bedroom apartment
+                                        </option>
+                                        <option value="6,500 lbs- 2 bedroom home">6,500 lbs- 2 bedroom home
+                                        </option>
+                                        <option value="10,000 lbs - 3 bedroom home">10,000 lbs - 3 bedroom home
+                                        </option>
+                                        <option value="15,000 lbs- 4 bedroom home">15,000 lbs- 4 bedroom home
+                                        </option>
+                                        <option value="20,000 lbs - 5 bedroom home">20,000 lbs - 5 bedroom home
+                                        </option>
+					                </select>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Moving To:</h3>
+                        <div class="form-inputs col-xs-offset-1">
+                            <div class="form-group row">
+                                <label for="Destination City" class="col-xs-12 col-md-2 col-form-label">City:</label>
+                                <div class="col-xs-12 col-md-10">
+                                    <input type="text" name="Destination City" size="28" tabindex="14">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Destination Country" class="col-xs-12 col-md-2 col-form-label">Country:</label>
+                                <div class="col-xs-12 col-md-10">
+                                    <input type="text" name="Destination Country" size="28" tabindex="15">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Service Type" class="col-xs-12 col-md-2 col-form-label">Service Type:</label>
+                                <div class="col-xs-12 col-md-10">
+                                    <select id="select1" class="txtSelect" tabindex="16" name="Type of Service" size="1">
+                                        <option selected="">Please 
+                                        Select</option>
+                                        <option value="Full Packing and Loading">
+                                        Full Packing and Loading
+                                        </option>
+                                        <option value="Partial Packing and Loading">
+                                        Partial Packing and Loading
+                                        </option>
+                                        <option value="Self Pack: Loading Only">
+                                        Self Pack: Loading Only
+                                        </option>
+                                        <option value="Self Pack: Self Load">
+                                        Self Pack: Self Load
+                                        </option>
+                                        <option value="Self Load: Self Unload">
+                                        Self Load: Self Unload
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Move Type" class="col-xs-12 col-md-2 col-form-label">Move Type:</label>
+                                <div class="col-xs-12 col-md-10">
+                                    <select size="1" name="Type of Move" tabindex="17">
+                                        <option selected="" value="Please Select">Please Select
+                                        </option>
+                                        <option value="Door to Door">Door to 
+                                        Door</option>
+                                        <option value="Door to Port/terminal">Door to 
+                                        Port/terminal</option>
+                                        <option value="Warehouse to Door">Warehouse to 
+                                        Door</option>
+                                        <option value="Warehouse to port/terminal">
+                                        Warehouse to port/terminal</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>Additional Comments:</h3>
+                        <div class="form-inputs col-xs-offset-1">
+                            <div class="form-group row">
+                                <div class="col-xs-12">
+                                    <textarea class="col-xs-12" type="text" rows="2" name="Comments" tabindex="18"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-xs-6 text-center">
+                                <button >Submit</button>
+                            </div>
+                            <div class="col-xs-6 text-center">
+                                <button >Cancel</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section id="contact">
         <div class="container">
@@ -218,11 +515,11 @@
                     <hr class="primary">
                     <p>Need more information? Ready to schedule an in home survey? Give us a call or send us an email, we can't wait to hear from you!</p>
                 </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
+                <div class="col-sm-4 col-sm-offset-2 text-center">
                     <i class="fa fa-phone fa-3x sr-contact"></i>
                     <p>1-508-587-6993</p>
                 </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-sm-4 text-center">
                     <i class="fa fa-envelope-o fa-3x sr-contact"></i>
                     <p><a href="mailto:info@astrointl.com">info@astrointl.com</a></p>
                 </div>
