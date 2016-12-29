@@ -6,6 +6,9 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
+var clean = require('gulp-clean');
+var concat = require('gulp-concat');
+var gutil = require('gulp-util');
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -18,7 +21,7 @@ var banner = ['/*!\n',
 
 // Compile LESS files from /less into /css
 gulp.task('less', function() {
-    return gulp.src('less/creative.less')
+    return gulp.src('less/astro.less')
         .pipe(less())
         .pipe(header(banner, { pkg: pkg }))
         .pipe(gulp.dest('css'))
@@ -29,7 +32,7 @@ gulp.task('less', function() {
 
 // Minify compiled CSS
 gulp.task('minify-css', ['less'], function() {
-    return gulp.src('css/creative.css')
+    return gulp.src('css/astro.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('css'))
@@ -40,15 +43,18 @@ gulp.task('minify-css', ['less'], function() {
 
 // Minify JS
 gulp.task('minify-js', function() {
-    return gulp.src('js/creative.js')
-        .pipe(uglify())
+    gulp.src('js/*.min.js')
+        .pipe(clean());
+    gulp.src('js/*.js')
+        .pipe(uglify().on('error', gutil.log))
         .pipe(header(banner, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('js'))
         .pipe(browserSync.reload({
             stream: true
-        }))
+        }));
 });
+
 
 // Copy vendor libraries from /node_modules into /vendor
 gulp.task('copy', function() {
@@ -99,5 +105,24 @@ gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() 
 
 // Official Build
 gulp.task("official", ['less', 'minify-css', 'minify-js'], function(){
-    
+    // Clear official folder
+    gulp.src('/Official')
+		.pipe(clean());
+    // Copy index to official/index.html
+    gulp.src('index.html')
+        .pipe(gulp.dest('Official/'));
+    // Copy all *.min.css into offical/css
+    gulp.src('css/*.min.css')
+        .pipe(gulp.dest('Official/css'));
+    // Copy all *.min.js into official/js
+    gulp.src('js/*.min.js')
+        .pipe(gulp.dest('Official/js'));
+    // Copy all img into official/img
+    gulp.src('img/**')
+        .pipe(gulp.dest('Official/img'));
+    // Copy all vendor into official/vendor
+    gulp.src('vendor/**')
+        .pipe(gulp.dest('Official/vendor'));
+    // Run a server to test
+
 });

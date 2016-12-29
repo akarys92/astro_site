@@ -17,7 +17,7 @@
     var curr_revs = [];
 
     // Update Reviews every 5 seconds
-    window.setInterval(() => {
+    window.setInterval(function() {
         getNextReviews();
         updateReviews();
     }, 5000);
@@ -39,11 +39,6 @@
             curr_revs = data.slice(curr_rev, rev_end);
             curr_rev = rev_end;
         }            
-    };
-    
-    // Get last set of reviews
-    function getLastReviews() {
-
     };
     
     // Update reviews on screen
