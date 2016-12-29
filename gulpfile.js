@@ -43,9 +43,8 @@ gulp.task('minify-css', ['less'], function() {
 
 // Minify JS
 gulp.task('minify-js', function() {
-    gulp.src('js/*.min.js')
-        .pipe(clean());
-    gulp.src('js/*.js')
+
+    gulp.src(['js/*.js', '!js/*.min.js'])
         .pipe(uglify().on('error', gutil.log))
         .pipe(header(banner, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
@@ -91,7 +90,7 @@ gulp.task('browserSync', function() {
             baseDir: ''
         },
     })
-})
+});
 
 // Dev task with browserSync
 gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
@@ -123,6 +122,5 @@ gulp.task("official", ['less', 'minify-css', 'minify-js'], function(){
     // Copy all vendor into official/vendor
     gulp.src('vendor/**')
         .pipe(gulp.dest('Official/vendor'));
-    // Run a server to test
-
+    
 });
