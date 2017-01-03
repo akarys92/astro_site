@@ -95,7 +95,7 @@
             {
                 "Name": "Miikka",
                 "Location": "Helsinki Finland",
-                "Review": "Thank you very much.  You mad our life allot easier.",
+                "Review": "Thank you very much.  You made our life a lot easier.",
                 "Date": "Aug. 15, 2015"
             },
             {
