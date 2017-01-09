@@ -12,9 +12,8 @@ var gutil = require('gulp-util');
 
 // Set the banner content
 var banner = ['/*!\n',
-    ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-    ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-    ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n',
+    ' * Astro International - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
+    ' * Copyright 2016-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
     ' */\n',
     ''
 ].join('');
@@ -108,7 +107,7 @@ gulp.task("official", ['less', 'minify-css', 'minify-js'], function(){
     gulp.src('/Official')
 		.pipe(clean());
     // Copy index to official/index.html
-    gulp.src('index.html')
+    gulp.src('mobile.html')
         .pipe(gulp.dest('Official/'));
     // Copy all *.min.css into offical/css
     gulp.src('css/*.min.css')
