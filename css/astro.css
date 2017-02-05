@@ -279,6 +279,12 @@ header .header-content .header-content-inner p {
 .call-to-action h2 {
   margin: 0 auto 20px;
 }
+.social-button {
+  margin: 20px;
+  margin-top: 30px;
+  color: black;
+  text-decoration: none;
+}
 .text-primary {
   color: #0f4499;
 }
