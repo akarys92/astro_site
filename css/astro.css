@@ -409,6 +409,20 @@ fieldset[disabled] .btn-primary.active {
 .quote-body {
   margin: 5%;
 }
+.BBB-logo-box {
+  margin-top: 25px;
+}
+#Accreditations {
+  padding-bottom: 0px;
+}
+.maritime-license {
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+}
+.license-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 ::-moz-selection {
   color: white;
   text-shadow: none;
